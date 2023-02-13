@@ -32,7 +32,7 @@ pipeline {
             }
          stage('Build Docker image'){
              steps{
-                 sh 'docker build -t rayleigh0/Hello-Jenkins:1.0 .'
+                 sh 'docker build -t rayleigh0/Hello-Jenkins .'
              }
          }
          stage(' Dockerhub login') {
