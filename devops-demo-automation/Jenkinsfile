@@ -20,7 +20,7 @@ pipeline {
          }
         stage('Build Maven'){
             steps{
-                dir('Demo-Project'){
+                dir('devops-demo-automation'){
                 sh 'mvn -B -DskipTests clean package'
                 sh 'mvn -B -DskipTests clean install'
                 }
