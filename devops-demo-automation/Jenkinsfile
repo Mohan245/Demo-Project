@@ -20,9 +20,12 @@ pipeline {
          }
         stage('Build Maven'){
             steps{
+                
                 dir('devops-demo-automation'){
                 sh 'mvn -B -DskipTests clean package'
                 sh 'mvn -B -DskipTests clean install'
+                archiveArtifacts '**/target/*.*ar'
+                 
                 }
                }
             }
