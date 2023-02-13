@@ -44,7 +44,7 @@ pipeline {
          }
          stage(' push image to hub') {
              steps{
-                 sh 'docker push devdemo_0/jenkins-demo'
+                 sh 'docker push devdemo_0/devdemo_0/jenkins-demo'
              }
          }        
          
