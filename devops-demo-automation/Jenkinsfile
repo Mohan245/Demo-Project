@@ -14,9 +14,9 @@ pipeline {
         }     
         stage('Build Maven'){
             steps{
-                dir('devops-demo-automation'){
+                
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohan245/Demo-Project']])
-                sh 'mvn -B -DskipTests clean install'
+                 mvn ' clean install -DskipTests'
                }
             }
         }       
