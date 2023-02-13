@@ -32,7 +32,9 @@ pipeline {
             }
          stage('Build Docker image'){
              steps{
-                 sh 'docker build -t DevOps-AutomationDemo/hello-jenkins .'
+                  dir('DevOps-AutomationDemo'){
+                 sh 'docker build -t DevOps-AutomationDemo/jenkins-demo .'
+                  }
              }
          }
          stage(' Dockerhub login') {
