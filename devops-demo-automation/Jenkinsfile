@@ -5,18 +5,18 @@ pipeline {
         jdk "JDK"
     }
      stages{
-        stage("Initialize"){
+        stage('Initialize'){
             steps{
                 sh '''  echo 'PATH = ${M2_HOME}/bin:${PATH}'
                         echo 'M2_HOME = /usr/share/maven'
                    '''             
             }
         }     
-        stage("Build Maven"){
+        stage('Build Maven'){
             steps{
-                dir("devops-demo-automation"){
+                dir('devops-demo-automation'){
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohan245/Demo-Project']])
-                sh "mvn clean install"
+                sh 'mvn -B -DskipTests clean install'
                }
             }
         }       
