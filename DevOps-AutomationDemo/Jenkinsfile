@@ -33,7 +33,7 @@ pipeline {
          stage('Build Docker image'){
              steps{
                   dir('DevOps-AutomationDemo'){
-                 sh 'docker build -t DevOps-AutomationDemo/jenkins-demo .'
+                 sh 'docker build -t devdemo_0/jenkins-demo .'
                   }
              }
          }
