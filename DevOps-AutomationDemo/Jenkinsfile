@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     environment {
+        DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
+    }
     tools{
         maven "Maven"
         jdk "JDK"
@@ -19,18 +22,38 @@ pipeline {
              }
          }
         stage('Build Maven'){
-            steps{
-                
+            steps{                
                 dir('DevOps-AutomationDemo'){
                 sh 'mvn -B -DskipTests clean package'
-                sh 'mvn -B -DskipTests clean install'
-              
+                sh 'mvn -B -DskipTests clean install'            
                  
                 }
-               }
+               }         
             }
+         stage('Build Docker image'){
+             steps{
+                 sh 'docker build -t rayleigh0/Hello-Jenkins-Image:$BUILD_NUMBER .'
+             }
+         }
+         stage(' Dockerhub login') {
+             steps{
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+             }
+         }
+         stage(' push image to hub') {
+             steps{
+                 sh 'docker push rayleigh0/Hello-Jenkins-Image:$BUILD_NUMBER'
+             }
+         }        
+         
         }       
  }
+post {
+        always {
+            sh 'docker logout'
+        }
+    }
+}
          
    
         
