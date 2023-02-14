@@ -42,20 +42,22 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
              }
          }
-         stage(' push image to hub') {
+         stage(' pushing image to dockerhub') {
              steps{
                  sh 'docker tag  jenkinsdev-demo rayleigh0/jenkinsdev-demo '
                  sh 'docker  push rayleigh0/jenkinsdev-demo '
              }
-         }        
-         
-        }       
+         }                 
  }
+    
 post {
         always {
             sh 'docker logout'
         }
    }
+
+}
+
 
          
    
