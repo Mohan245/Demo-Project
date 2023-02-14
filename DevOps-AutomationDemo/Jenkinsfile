@@ -33,7 +33,7 @@ pipeline {
          stage('Build Docker image'){
              steps{
                   dir('DevOps-AutomationDemo'){
-                 sh 'docker build -t devdemo_0/jenkins-demo:latest .'
+                 sh 'docker build -t devdemo_0/jenkins-demo .'
                   }
              }
          }
@@ -44,7 +44,7 @@ pipeline {
          }
          stage(' push image to hub') {
              steps{
-                 sh 'docker  push devdemo_0/jenkins-demo:latest '
+                 sh 'docker  push devdemo_0/jenkins-demo '
              }
          }        
          
