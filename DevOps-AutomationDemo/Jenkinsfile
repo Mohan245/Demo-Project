@@ -45,7 +45,7 @@ pipeline {
                      )
              }
          }        
-         stage('publish build info"){
+         stage('publish build info'){
                steps{
                    rtpublishBuildinfo(
                        serverId:'Artifactory-server',
