@@ -30,6 +30,21 @@ pipeline {
                 }
                }         
             }
+         stage('upload war/jar file to artifactory'){
+             steps{
+                 rtupload(
+                     serverId: 'Artifactory-server',
+                     spec:'''{
+                        'files':[
+                             {
+                                'pattern':'.jar',
+                                'target':'DevOps-AutomationDemo/target/jenkins-0.0.1-SNAPSHOT.jar'
+                             }
+                            ]
+                           }'''
+                     )
+             }
+         }                         
          stage('Build Docker image'){
              steps{
                   dir('DevOps-AutomationDemo'){
