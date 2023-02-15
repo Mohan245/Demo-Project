@@ -32,7 +32,7 @@ pipeline {
             }
          stage('upload war/jar file to artifactory'){
              steps{
-                 rtupload(
+                 rtUpload(
                      serverId: 'Artifactory-server',
                      spec:'''{
                         'files':[
