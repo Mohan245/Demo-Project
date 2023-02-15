@@ -44,7 +44,14 @@ pipeline {
                            }''',
                      )
              }
-         }                         
+         }        
+         stage('publish build info"){
+               steps{
+                   rtpublishBuildinfo(
+                       serverId:'Artifactory-server',
+                       )
+               }
+          }
          stage('Build Docker image'){
              steps{
                   dir('DevOps-AutomationDemo'){
