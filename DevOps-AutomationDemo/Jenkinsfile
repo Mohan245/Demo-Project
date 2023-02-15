@@ -32,7 +32,7 @@ pipeline {
             }
          stage ('Server config'){
              steps{
-                rtserver(
+                rtServer(
                  id:'Artifactory-server',
                  url:'http:18.183.232.129:8081/artifactory',
                  username:'admin',
