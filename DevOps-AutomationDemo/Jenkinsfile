@@ -32,7 +32,7 @@ pipeline {
             }
          stage('upload war/jar file to artifactory'){
              steps{
-                 rtupload(
+                 rt upload(
                      serverId: 'Artifactory-server',
                      spec:'''{
                         'files':[
@@ -47,7 +47,7 @@ pipeline {
          }        
          stage('publish build info'){
                steps{
-                   rtpublishBuildinfo(
+                   rt publishBuildinfo(
                        serverId:'Artifactory-server',
                        )
                }
