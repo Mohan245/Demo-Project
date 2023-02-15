@@ -30,6 +30,17 @@ pipeline {
                 }
                }         
             }
+         stage ('Server config'){
+             steps{
+                 id:'Artifactory-server',
+                 url:'http:18.183.232.129:8081/artifactory',
+                 username:'admin',
+                 password:'P#256?.!hj89w..*',
+                 bypassProxy:true,
+                 timeout:300
+                 )
+             }
+         }
          stage('upload war/jar file to artifactory'){
              steps{
                  rtUpload(
