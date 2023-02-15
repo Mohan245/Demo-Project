@@ -41,7 +41,7 @@ pipeline {
                                 'target':'DevOps-AutomationDemo/target/jenkins-0.0.1-SNAPSHOT.jar'
                              }
                             ]
-                           }'''
+                           }''',
                      )
              }
          }                         
