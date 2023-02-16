@@ -33,12 +33,10 @@ pipeline {
          stage ('Server config'){
              steps{
                 rtServer(
-                 id:'Artifactory-server',
-                 url:'http://18.183.232.129:8082/artifactory',
-                 username:'admin',
-                 password:'P#256?.!hj89w..*',
-                 bypassProxy:true,
-                 timeout:300
+                    def readconfig=readProperties file :'MyPropertiesConfig'
+                    def PathName =readConfig['config']
+                    println PathName
+                
                  )
              }
          }
