@@ -1,6 +1,6 @@
 
 pipeline {
-    node{
+    
     agent any
      environment {
         DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
@@ -35,10 +35,10 @@ pipeline {
          stage ('Server config'){
              steps{
                 rtServer(
-                    def readconfig=readProperties file :'MyPropertiesConfig'
-                    def PathName =readConfig['config']
-                    println PathName
-                
+                    def readconfig='07ccf874-d23e-4cf1-876c-e9d9f1a040c8'
+                    configFileProvider([configFile(fileId: 'readconfig', variable: 'config')]) 
+                    echo "  Reading Server configuration from properties file .... "
+                    sh "cat ${env.PACKER_OPTIONS}"                    
                  )
              }
          }
@@ -82,7 +82,7 @@ pipeline {
                  sh 'docker  push rayleigh0/jenkinsdev-demo '
              }
          }    
-     }
+     
  }
     
 post {
