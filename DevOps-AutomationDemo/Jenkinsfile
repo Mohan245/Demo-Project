@@ -42,9 +42,9 @@ pipeline {
                       sh "cat ${env.url}"
                       echo " =========== ~~~~~~~~~~~~ ============ "
                      }  
-                     }
                      
-                     )                 
+                     
+                                     
              }
          }
          stage('upload war/jar file to artifactory'){
