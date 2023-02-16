@@ -35,21 +35,17 @@ pipeline {
             }
          stage ('Server config'){
              steps{
-                 environment{
-                     def readconfig='07ccf874-d23e-4cf1-876c-e9d9f1a040c8'
-                 }
-                 
+                                 
                 rtServer(
-                                      
-                    configFileProvider([configFile(fileId: "readconfig", variable: 'configFile')]) {
-                     def props = readProperties file: "$configFile"
+                      def readconfig='07ccf874-d23e-4cf1-876c-e9d9f1a040c8'            
+                      configFileProvider([configFile(fileId: "readconfig", variable: 'configFile')]) {
+                      def props = readProperties file: "$configFile"
                       echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                       sh "cat ${env.configFile}"
                       echo " =========== ~~~~~~~~~~~~ ============ "
                      }                       
                      
-                     )
-                 
+                     )                 
              }
          }
          stage('upload war/jar file to artifactory'){
