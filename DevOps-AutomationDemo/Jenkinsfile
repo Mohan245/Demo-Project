@@ -35,16 +35,11 @@ pipeline {
             }
          stage ('Server config'){
              steps{
-                               
-                rtServer(
-                      def readconfig='07ccf874-d23e-4cf1-876c-e9d9f1a040c8'  
-                     
-                     script { 
-                      echo '$readconfig'
-                      configFileProvider([configFile(fileId: "readconfig", variable: 'id')]) {                          
-                      def props = readProperties file: "$id"
+                              
+                      configFileProvider([configFile(fileId:'07ccf874-d23e-4cf1-876c-e9d9f1a040c8',variable: 'url' )]) {                          
+                      def props = readProperties file: "$url"
                       echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
-                      sh "cat ${env.id}"
+                      sh "cat ${env.url}"
                       echo " =========== ~~~~~~~~~~~~ ============ "
                      }  
                      }
