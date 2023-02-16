@@ -37,7 +37,6 @@ pipeline {
              steps{
                               
                       configFileProvider([configFile(fileId:'07ccf874-d23e-4cf1-876c-e9d9f1a040c8',variable: 'url' )]) {                          
-                      def props = readProperties file: "$url"
                       echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                       sh "cat ${env.url}"
                       echo " =========== ~~~~~~~~~~~~ ============ "
