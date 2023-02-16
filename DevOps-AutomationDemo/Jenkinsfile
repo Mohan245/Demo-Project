@@ -1,4 +1,6 @@
+
 pipeline {
+    node{
     agent any
      environment {
         DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
@@ -79,7 +81,8 @@ pipeline {
                  sh 'docker tag  jenkinsdev-demo rayleigh0/jenkinsdev-demo '
                  sh 'docker  push rayleigh0/jenkinsdev-demo '
              }
-         }                 
+         }    
+     }
  }
     
 post {
