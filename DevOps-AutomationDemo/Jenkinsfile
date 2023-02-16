@@ -35,15 +35,14 @@ pipeline {
             }
          stage ('Server config'){
              steps{
-                              
+                   rtUpload(           
                       configFileProvider([configFile(fileId:'07ccf874-d23e-4cf1-876c-e9d9f1a040c8',variable: 'url' )]) {                          
                       echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                       sh "cat ${env.url}"
                       echo " =========== ~~~~~~~~~~~~ ============ "
                      }  
-                     
-                     
-                                     
+                   )                    
+                                                       
              }
          }
          stage('upload war/jar file to artifactory'){
