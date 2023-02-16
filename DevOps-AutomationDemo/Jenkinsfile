@@ -38,6 +38,7 @@ pipeline {
                                
                 rtServer(
                       def readconfig='07ccf874-d23e-4cf1-876c-e9d9f1a040c8'  
+                      echo '$readconfig'
                      script { 
                       configFileProvider([configFile(fileId: "readconfig", variable: 'id')]) {
                       def props = readProperties file: "$id"
