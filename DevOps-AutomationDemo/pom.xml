@@ -69,10 +69,10 @@
                             <review.team>qa</review.team>
                         </deployProperties>
                         <publisher>
-                            <contextUrl>http://52.192.92.241:8082/</contextUrl>
+                            <contextUrl>http://18.183.116.129:8081/</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
-                            <repoKey>Rayleigh</repoKey>
+                            <repoKey>Rayleigh0</repoKey>
                             <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                         </publisher>
                     </configuration>
