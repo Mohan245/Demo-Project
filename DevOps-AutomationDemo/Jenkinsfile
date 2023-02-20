@@ -35,12 +35,12 @@ pipeline {
           stage('Deploy Maven'){
             steps{       
                 configFileProvider([configFile(fileId:'87bf9d76-7c1b-475c-b9fc-a7c86f1a9fc5')]{
-                    sh 'mvn -s fileId  clean install'                    
-                          
+                    sh 'mvn -s fileId  clean install'    
+                 }
+                        
                  
-                }
-               }         
-            }
+             }        
+          }
          
          stage ('Server config'){
              steps{                          
