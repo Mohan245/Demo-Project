@@ -49,9 +49,32 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<distributionManagement>
+        	<repository>
+            		<id>Artifactory-server</id>
+			<name>Kaisen</name>
+            		<url>http://13.112.78.113:8081/artifactory/</url>
+			<releases>
+               		 	<enabled>true</enabled>
+           	        </releases>
+           	       <snapshots>
+                		<enabled>false</enabled>
+           	       </snapshots>
+        	</repository>
+    	</distributionManagement>
 	
 
 	<build>
+		<pluginManagement>
+  			<plugins>
+   			 	<plugin>
+    					 <groupId>org.apache.maven.plugins</groupId>
+     					 <artifactId>maven-deploy-plugin</artifactId>
+    					 <version>2.8.2</version>
+    				</plugin>
+   			</plugins>
+  		</pluginManagement>
+		
 		<plugins>
 			       <plugin>
             <groupId>org.jfrog.buildinfo</groupId>
@@ -90,11 +113,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>  
-				<artifactId>maven-deploy-plugin</artifactId> 
-				<version>2.7</version>
-			</plugin>				
+							
 			
 		</plugins>
 	</build>
