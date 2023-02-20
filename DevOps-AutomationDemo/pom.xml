@@ -49,6 +49,13 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<distributionManagement>
+        	<repository>
+            		<id>org.jfrog.buildinfo</id>
+			<name>http://13.112.78.113:8081/artifactory/Kaisen/</name>
+            		<url>https://jcenter.bintray.com</url>
+        	</repository>
+    	</distributionManagement>
 
 	<build>
 		<plugins>
