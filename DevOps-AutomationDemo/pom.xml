@@ -76,11 +76,11 @@
                             <review.team>qa</review.team>
                         </deployProperties>
                         <publisher>
-                            <contextUrl>http://18.183.116.129:8081/</contextUrl>
+                            <contextUrl>http://13.112.78.113:8081/</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
-                            <repoKey>Rayleigh0</repoKey>
-                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                            <repoKey>Kaisen</repoKey>
+                            <snapshotRepoKey>maven-2-default</snapshotRepoKey>
                         </publisher>
                     </configuration>
                 </execution>
