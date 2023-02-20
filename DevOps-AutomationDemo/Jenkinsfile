@@ -38,7 +38,7 @@ pipeline {
                     sh 'mvn -s fileId  clean install'    
                  
                 }
-              }
+              
            }
          
          stage ('Server config'){
