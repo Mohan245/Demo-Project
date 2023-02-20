@@ -34,9 +34,11 @@ pipeline {
             }
          stage('Deploy'){
              steps{
+                 dir('DevOps-AutomationDemo'){
                   configFileProvider([configFile(fileId:'87bf9d76-7c1b-475c-b9fc-a7c86f1a9fc5')]){
                     sh 'mvn -B -DskipTests clean install'
                   }
+                 }
              }
          }                                           
                  
