@@ -52,8 +52,14 @@
 	<distributionManagement>
         	<repository>
             		<id>org.jfrog.buildinfo</id>
-			<name>http://13.112.78.113:8081/artifactory/Kaisen/</name>
-            		<url>https://jcenter.bintray.com</url>
+			<name>Kaisen/</name>
+            		<url>http://13.112.78.113:8081/artifactory/</url>
+			<releases>
+               		 	<enabled>true</enabled>
+           	        </releases>
+           	       <snapshots>
+                		<enabled>false</enabled>
+           	       </snapshots>
         	</repository>
     	</distributionManagement>
 
@@ -79,8 +85,8 @@
                             <contextUrl>http://13.112.78.113:8081/</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
-                            <repoKey>Kaisen</repoKey>
-                            <snapshotRepoKey>maven-2-default</snapshotRepoKey>
+                            <repoKey>ext-releases-local</repoKey>
+                            <snapshotRepoKey>ext-snapshots-local</snapshotRepoKey>
                         </publisher>
                     </configuration>
                 </execution>
