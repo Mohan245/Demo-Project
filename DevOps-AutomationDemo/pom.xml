@@ -73,8 +73,8 @@
                             <contextUrl>http://13.112.78.113:8081/</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
-                            <repoKey>ext-releases-local</repoKey>
-                            <snapshotRepoKey>ext-snapshots-local</snapshotRepoKey>
+                            <repoKey>lib-release</repoKey>
+                            <snapshotRepoKey>libs-snapshot</snapshotRepoKey>
                         </publisher>
                     </configuration>
                 </execution>
