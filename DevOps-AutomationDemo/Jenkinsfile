@@ -62,7 +62,7 @@ pipeline {
                         "files":[
                              {
                                 "pattern":"*.jar",
-                                "target":"Rayleigh0"
+                                "target":"Kaisen/"
                              }
                             ]
                            }''',
