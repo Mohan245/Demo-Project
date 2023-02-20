@@ -49,19 +49,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<distributionManagement>
-        	<repository>
-            		<id>Artifactory-server</id>
-			<name>Kaisen</name>
-            		<url>http://13.112.78.113:8081/artifactory/</url>
-			<releases>
-               		 	<enabled>true</enabled>
-           	        </releases>
-           	       <snapshots>
-                		<enabled>false</enabled>
-           	       </snapshots>
-        	</repository>
-    	</distributionManagement>
+	
 
 	<build>
 		<plugins>
