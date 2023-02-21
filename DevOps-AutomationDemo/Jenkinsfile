@@ -38,7 +38,7 @@ pipeline {
                   configFileProvider([configFile(fileId:'d3ca3b11-9498-4707-b696-c0eaabd6e269')]){
                     sh 'mvn clean deploy -Dmaven.test.skip=true'
 
-'
+
                   }
                  }
              }
