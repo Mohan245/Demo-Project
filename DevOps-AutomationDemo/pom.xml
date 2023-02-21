@@ -52,8 +52,8 @@
 	<distributionManagement>
         	<repository>
             		<id>Artifactory-server</id>
-			<name>Kaisen</name>
-            		<url>http://13.112.78.113:8081/artifactory/</url>
+			<name>Kaizen</name>
+            		<url>http://15.207.51.90:8082/artifactory/Kaizen/</url>
 			<releases>
                		 	<enabled>true</enabled>
            	        </releases>
@@ -93,7 +93,7 @@
                             <review.team>qa</review.team>
                         </deployProperties>
                         <publisher>
-                            <contextUrl>http://13.112.78.113:8081/</contextUrl>
+                            <contextUrl>http://15.207.51.90:8082/artifactory/Kaizen//</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
                             <repoKey>lib-release</repoKey>
