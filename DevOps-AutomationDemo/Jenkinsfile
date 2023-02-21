@@ -35,11 +35,11 @@ pipeline {
          stage('Deploy'){
              steps{
                  dir('DevOps-AutomationDemo'){
-                  configFileProvider([configFile(fileId:'d3ca3b11-9498-4707-b696-c0eaabd6e269')]){
-                    sh "mvn clean install -s d3ca3b11-9498-4707-b696-c0eaabd6e269"
+                  
+                    sh "mvn clean install -s settings.xml"
 
 
-                  }
+                  
                  }
              }
          }                                           
