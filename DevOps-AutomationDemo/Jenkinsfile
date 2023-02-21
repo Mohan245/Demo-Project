@@ -62,7 +62,7 @@ pipeline {
                         "files":[
                              {
                                 "pattern":"*.jar",
-                                "target":"http://13.112.78.113:8081/artifactory/Kaisen/"
+                                "target":"http://15.207.51.90:8082/artifactory/Kaizen/"
                              }
                             ]
                            }''',
