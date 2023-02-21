@@ -51,7 +51,7 @@
 	</dependencyManagement>
 	<distributionManagement>
         	<repository>
-            		<id>org.jfrog.buildinfo</id>
+            		<id>Kaizen</id>
 			<name>Kaizen</name>
             		<url>http://15.207.51.90:8082/artifactory/Kaizen</url>
 			<releases>
