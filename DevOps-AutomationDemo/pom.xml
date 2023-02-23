@@ -89,7 +89,7 @@
                             <review.team>qa</review.team>
                         </deployProperties>
                         <publisher>
-                            <contextUrl>http://13.233.229.76:8082/artifactory</contextUrl>
+                            <contextUrl>http://13.233.229.76:8082/artifactory/Kaizen/</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
                             <repoKey>lib-release</repoKey>
