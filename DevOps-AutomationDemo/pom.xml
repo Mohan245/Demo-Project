@@ -49,19 +49,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<distributionManagement>
-        	<repository>
-            		<id>Kaizen</id>
-			<name>Kaizen</name>
-            		<url>http://13.233.229.76:8082/artifactory/Kaizen/</url>
-			<releases>
-               		 	<enabled>true</enabled>
-           	        </releases>
-           	       <snapshots>
-                		<enabled>false</enabled>
-           	       </snapshots>
-        	</repository>
-    	</distributionManagement>
 	
 
 	<build>		
