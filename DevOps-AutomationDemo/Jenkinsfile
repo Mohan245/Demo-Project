@@ -28,6 +28,7 @@ pipeline {
             steps{                
                 dir('DevOps-AutomationDemo'){
                 sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean install' 
                                  
                 }
                }         
