@@ -34,13 +34,9 @@ pipeline {
             }
          stage('Deploy'){
              steps{
-                
+                 dir('DevOps-AutomationDemo'){                
                     sh "mvn deploy"
-                    
-                     
-
-
-                  
+                 }                                     
                  
              }
          }                                           
