@@ -43,39 +43,39 @@ pipeline {
          }                                           
                  
              
-         stage ('Server config'){
-             steps{                          
-                      configFileProvider([configFile(fileId:'07ccf874-d23e-4cf1-876c-e9d9f1a040c8',variable: 'url' )]) {                          
-                      echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
-                      sh "cat ${env.url}"
-                      echo " =========== ~~~~~~~~~~~~ ============ "
-                     }  
+//          stage ('Server config'){
+//              steps{                          
+//                       configFileProvider([configFile(fileId:'07ccf874-d23e-4cf1-876c-e9d9f1a040c8',variable: 'url' )]) {                          
+//                       echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
+//                       sh "cat ${env.url}"
+//                       echo " =========== ~~~~~~~~~~~~ ============ "
+//                      }  
                                      
                                                        
-             }
-         }
-         stage('upload war/jar file to artifactory'){
-             steps{
-                 rtUpload(
-                     serverId: 'Artifactory-server',
-                     spec:'''{
-                        "files":[
-                             {
-                                "pattern":"*.jar",
-                                "target":"http://13.233.229.76:8082/artifactory/Kaizen/"
-                             }
-                            ]
-                           }''',
-                     )
-             }
-         }        
-         stage('publish build info'){
-               steps{
-                   rtPublishBuildInfo(
-                       serverId:'Artifactory-server',
-                       )
-               }
-          }
+//              }
+//          }
+//          stage('upload war/jar file to artifactory'){
+//              steps{
+//                  rtUpload(
+//                      serverId: 'Artifactory-server',
+//                      spec:'''{
+//                         "files":[
+//                              {
+//                                 "pattern":"*.jar",
+//                                 "target":"http://13.233.229.76:8082/artifactory/Kaizen/"
+//                              }
+//                             ]
+//                            }''',
+//                      )
+//              }
+//          }        
+//          stage('publish build info'){
+//                steps{
+//                    rtPublishBuildInfo(
+//                        serverId:'Artifactory-server',
+//                        )
+//                }
+//           }
          stage('Build Docker image'){
              steps{
                   dir('DevOps-AutomationDemo'){
