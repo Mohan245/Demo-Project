@@ -53,7 +53,7 @@
         	<repository>
             		<id>Kaizen</id>
 			<name>Kaizen</name>
-            		<url>http://15.207.51.90:8082/artifactory/Kaizen/</url>
+            		<url>http://13.233.229.76:8082/artifactory/Kaizen/</url>
 			<releases>
                		 	<enabled>true</enabled>
            	        </releases>
@@ -89,7 +89,7 @@
                             <review.team>qa</review.team>
                         </deployProperties>
                         <publisher>
-                            <contextUrl>http://15.207.51.90:8082/artifactory</contextUrl>
+                            <contextUrl>http://13.233.229.76:8082/artifactory</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
                             <repoKey>lib-release</repoKey>
