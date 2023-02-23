@@ -70,11 +70,8 @@
                     <goals>
                         <goal>publish</goal>
                     </goals>
-                    <configuration>
-                        <deployProperties>
-                            <gradle>awesome</gradle>
-                            <review.team>qa</review.team>
-                        </deployProperties>
+         <!--        <configuration>
+                        
                         <publisher>
                             <contextUrl>http://13.233.229.76:8082/artifactory/Kaizen/</contextUrl>
                             <username>admin</username>
