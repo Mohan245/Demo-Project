@@ -78,8 +78,8 @@
                             <contextUrl>http://13.233.229.76:8082/artifactory</contextUrl>
                             <username>admin</username>
                             <password>P#256?.!hj89w..*</password>
-                            <repoKey>maven-2-default</repoKey>
-                            <snapshotRepoKey>maven-2-default</snapshotRepoKey>
+                            <repoKey>Kaizen-cache</repoKey>
+                            <snapshotRepoKey>Kaizen-cache</snapshotRepoKey>
                         </publisher>
                     </configuration>
                 </execution>
