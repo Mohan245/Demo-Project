@@ -70,7 +70,7 @@
                     <goals>
                         <goal>publish</goal>
                     </goals>
-         <!--        <configuration>
+                 <configuration>
                         
                         <publisher>
                             <contextUrl>http://13.233.229.76:8082/artifactory/Kaizen/</contextUrl>
