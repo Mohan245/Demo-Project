@@ -35,8 +35,8 @@ pipeline {
          stage('Deploy'){
              steps{
                  dir('DevOps-AutomationDemo'){
-                  
-                    sh "mvn clean install deploy -s settings.xml"
+                    sh "mvn deploy"
+                    sh "mvn clean install -s settings.xml"
                      
 
 
