@@ -1,9 +1,16 @@
-
+def get_project_code(repo_url){
+    project_codes = [
+        "https://github.com/Mohan245/Demo-Project.git": 'Mohan245',
+    ]
+    return project_codes[repo_url]
+    
 pipeline {
     
     agent any
      environment {
         DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
+        API_KEY      = credentials('Token')
+        PROJECT_CODE = get_project_code(https://github.com/Mohan245/Demo-Project.git)
        
     }
     tools{
@@ -17,7 +24,14 @@ pipeline {
                         echo 'M2_HOME =/opt/apache-maven-3.9.0'
                    '''             
             }
-        }     
+        }
+     stages{
+         stage('Automation-Flow') {
+            steps {
+                git credentialsId: 'Token', url: "$https://github.com/Mohan245/Demo-Project.git"
+                
+                 }
+              }
          stage('clone code'){
              steps {
                   checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohan245/Demo-Project']])
@@ -100,6 +114,7 @@ pipeline {
 post {
         always {
             sh 'docker logout'
+            cleanWs()
         }
    }
 
