@@ -11,7 +11,7 @@ pipeline {
      environment {
         DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
         API_KEY      = credentials('Token')
-        PROJECT_CODE = get_project_code(https://github.com/Mohan245/Demo-Project.git)       
+        PROJECT_CODE = get_project_code("https://github.com/Mohan245/Demo-Project.git")       
         }
     tools{
         maven "Maven"
