@@ -1,6 +1,6 @@
 def get_project_code(repo_url){
     project_codes = [
-        "https://github.com/Mohan245/Demo-Project.git": 'Mohan245',
+        "https://github.com/Mohan245/Demo-Project.git": 'DevOps-AutomationDemo',
     ]
     return project_codes[repo_url]
 }
