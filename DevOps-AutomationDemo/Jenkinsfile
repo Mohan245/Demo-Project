@@ -1,18 +1,22 @@
-def get_project_code(repo_url){
-    project_codes = [
-        "https://github.com/Mohan245/Demo-Project.git": 'DevOps-AutomationDemo',
-    ]
-    return project_codes[repo_url]
-}
     
 pipeline {
     
     agent any
-     environment {
-        DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')
-        API_KEY      = credentials('Token')
-        PROJECT_CODE = get_project_code("https://github.com/Mohan245/Demo-Project.git")       
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('Rayleigh-hub')          
         }
+    triggers {
+     GenericTrigger(
+         genericVariables: [
+            [key: 'ref', value: '$.ref']
+           ],
+        causeString: 'Triggered on $ref',
+        regexpFilterExpression: '',
+        regexpFilterText: '',
+        printContributedVariables: true,
+        printPostContent: true
+    )
+  }
     tools{
         maven "Maven"
         jdk "JDK"
@@ -28,7 +32,7 @@ pipeline {
          
          stage('Automation-Flow') {
             steps {
-                git credentialsId: 'Token', url: "$https://github.com/Mohan245/Demo-Project.git"
+               
                 
                  }
               }
