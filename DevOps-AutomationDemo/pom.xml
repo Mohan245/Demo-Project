@@ -16,7 +16,8 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.4</spring-cloud.version>
-	</properties>	
+	</properties>
+	<!-- demo -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
