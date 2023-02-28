@@ -7,16 +7,25 @@ pipeline {
         }
     triggers {
      GenericTrigger(
-         genericVariables: [
-            [key: 'ref', value: '$.ref']
-           ],
-        causeString: 'Triggered on $ref',
-        regexpFilterExpression: '',
-        regexpFilterText: '',
-        printContributedVariables: true,
-        printPostContent: true
-    )
-  }
+        genericVariables: [
+        [key: 'ref', value: '$.ref'],
+        [key: 'url', value: '$.repository.git_url']
+        ],
+
+     causeString: 'Triggered on $ref',
+
+     token: 'dqud6236',
+     
+
+     printContributedVariables: true,
+     printPostContent: true,
+
+     silentResponse: false,
+     
+     shouldNotFlattern: false,    
+   )
+   }
+ 
     tools{
         maven "Maven"
         jdk "JDK"
@@ -32,8 +41,7 @@ pipeline {
          
          stage('Automation-Flow') {
             steps {
-               
-                
+                    sh "echo $ref"                
                  }
               }
          stage('clone code'){
