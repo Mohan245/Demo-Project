@@ -44,12 +44,12 @@ pipeline {
                     sh "echo $ref"                
                  }
               }
-         stage('clone code'){
-             steps {
-                  checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohan245/Demo-Project']])
-                  echo 'code checkout'
-             }
-         }
+        // stage('clone code'){
+         //    steps {
+        //          checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Mohan245/Demo-Project']])
+         //         echo 'code checkout'
+         //    }
+         // }
         stage('Build Maven'){
             steps{                
                 dir('DevOps-AutomationDemo'){
